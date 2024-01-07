@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="meal-plan" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list"></i> Meal Plan</a>	
+		<a id="shopping" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i> Groceries</a>
+		<a id="recipes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cake-candles"></i> Special Recipes</a>
+		<a id="diary" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Food Diary</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'meal-plan')
+				window.open("https://www.notion.so/Meal-Planner-5b832c5c6fea483bba28d7a446aaaed2?pvs=4#be7e9812027a467f8f8c959b4e6d264e", '_blank').focus();
+			else if (id == 'shopping')
+				window.open("https://www.notion.so/Meal-Planner-5b832c5c6fea483bba28d7a446aaaed2?pvs=4#4255a85a2c884d63af74f6d4e061c03f", '_blank').focus();
+			else if (id == 'recipes')
+				window.open("https://www.notion.so/Meal-Planner-5b832c5c6fea483bba28d7a446aaaed2?pvs=4#8861fd0872a34073af23f188652881f4", '_blank').focus();
+			else if (id == 'diary')
+				window.open("https://www.notion.so/Meal-Planner-5b832c5c6fea483bba28d7a446aaaed2?pvs=4#f8c11c2e6090416ca798daa07b06cdc6", '_blank').focus();
+
+
+		}
+	</script>
+
+
+</body>
+
+</html>
