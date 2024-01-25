@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Tasks</a>
+		<a id="habits" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-repeat"></i> Habits</a>
+		<a id="meals" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-utensils"></i> Meals</a>
+		<a id="workouts" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-dumbbell"></i> Workouts</a>
+		<a id="couture" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-vest"></i> Couture</a>
+		<a id="bookshelf" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Bookshelf</a>
+		
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'tasks')
+				window.open("https://www.notion.so/Tasks-Schedule-d376064a213f4c759799695c09ee7ca5?pvs=4", '_blank').focus();
+			else if (id == "habits")
+				window.open("https://www.notion.so/Habit-Tracker-641d9a242671403f8fbd8e85d269d37c?pvs=4", '_blank').focus();
+			else if (id == "meals")
+				window.open("https://www.notion.so/Meal-Planner-5b832c5c6fea483bba28d7a446aaaed2?pvs=4", '_blank').focus();
+			else if (id == "workouts")
+				window.open("https://www.notion.so/Workout-Tracker-232a40b75935432b9001cae199df82e4?pvs=4", '_blank').focus();
+			else if (id == "couture")
+				window.open("https://www.notion.so/Couture-Room-30f100c59ab04d8d9ea323d20e406bd7?pvs=4", '_blank').focus();
+			else if (id == "bookshelf")
+				window.open("https://www.notion.so/Book-Tracker-db6da30b715c42d59bedd2f88b23b48d?pvs=4", '_blank').focus();
+		
+
+		}
+	</script>
+
+
+</body>
+
+</html>
